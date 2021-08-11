@@ -14,7 +14,6 @@ public class StackLogic<K> {
 			stack[top] = data;
 			top++;
 		}
-
 	}
 	
    	//Pop the element from stack	
@@ -43,5 +42,9 @@ public class StackLogic<K> {
 	//Check stack is full or not
 	public boolean isFull() {
 		return top == stack.length;
+	}
+	
+	public int size() {
+		return top;
 	}
 }	

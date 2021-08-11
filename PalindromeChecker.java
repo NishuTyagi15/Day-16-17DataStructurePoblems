@@ -1,8 +1,5 @@
 package dataStrProblems;
 
-import java.io.*;
-import java.util.Scanner;
-
 public class PalindromeChecker {
 	public static void main(String[] args) {
 		DequeLogic<Character> d = new DequeLogic<Character>();

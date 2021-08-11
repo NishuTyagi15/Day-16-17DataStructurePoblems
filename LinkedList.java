@@ -94,4 +94,24 @@ public class LinkedList<K> {
 		}
 		size--;
 	}
+	
+	public <K extends Comparable<K>> void sort(int size) {
+		Node<K> h = (Node<K>) head;
+		Node<K> h1 = h.next;
+		K temp;
+
+		for (int i = 0; i < size - 1; i++) {
+			for (int j = 0; j <= size - 1 - i - 1; j++) {
+
+				if (h.data.compareTo(h1.data) > 0) {
+					temp = h.data;
+					h.data = h1.data;
+					h1.data = temp;
+				}
+				h1 = h1.next;
+			}
+			h = h.next;
+			h1 = h.next;
+		}
+	}
 }

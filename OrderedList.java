@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Scanner;
 
 
-public class UnorderedList {
+public class OrderedList {
 	public static void main(String[] args) {
 		DataStructure d = new DataStructure();
 		LinkedList<String> list = new LinkedList<String>();
@@ -21,11 +21,18 @@ public class UnorderedList {
 			list.add(strArray[i]);
 		}
 		System.out.println(list.show());
+		System.out.println("\nSorting");
+		list.sort(size);
+		System.out.println(list.show());
 
 		Scanner S = new Scanner(System.in);
 		System.out.println("Enter key to search : ");
 		String key = S.next();
 		size = list.searchNode(key, size);
+		S.close();
+		
+		System.out.println("\nSorting");
+		list.sort(size);
 		System.out.println(list.show());
 
 		try {

@@ -1,8 +1,7 @@
 package dataStrProblems;
 
-public class StackLinkedList<K> {
+public class QueueLinkedList<K> {
 	Node<K> head;
-	public Object deleteAt;
 	int size = 0;
 	
 	public void add(Object data) {

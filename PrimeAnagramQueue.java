@@ -2,34 +2,29 @@ package dataStrProblems;
 
 import java.util.Arrays;
 
-public class PrimeAnagramStack {
+public class PrimeAnagramQueue {
 	public static void main(String[] args) {
 		int start = 0;
 		int end = 1000;
-
-		Stack<Integer> stack = new Stack<Integer>();
-
+		Queue<Integer> queue = new Queue<Integer>();
 		// putting values in array
+
 		for (int j = start; j <= end; j++) {
 			if (isPrime(j)) {
 				for (int k = j + 1; k < end; k++) {
 					if (isPrime(k)) {
 						if (isAnagram(String.valueOf(j), String.valueOf(k))) {
-							stack.push(j);
-							stack.push(k);
+							queue.enQueue(j);
+							queue.enQueue(k);
 						}
 					}
 				}
 			}
 		}
-		
-		// stack.show();
-		int tempSize = stack.size();
+
+		int tempSize = queue.size();
 		for (int i = 0; i < tempSize; i++) {
-			System.out.print(stack.peek() + " ");
-			if (!stack.isEmpty()) {
-				stack.pop();
-			}
+			System.out.print(queue.get(i) + " ");
 		}
 	}
 	

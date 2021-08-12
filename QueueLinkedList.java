@@ -11,7 +11,6 @@ public class QueueLinkedList<K> {
 			head = nodenew;
 			size++;
 		}
-
 		else {
 			Node<K> h = head;
 			while (h.next != null) {

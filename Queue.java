@@ -3,9 +3,9 @@ package dataStrProblems;
 import java.util.Scanner;
 
 public class Queue<K> {
-	QueueLinkedList<K> queue = new QueueLinkedList<K>();
 	int index = 0;
 	public int bankBalance = 500000;
+	QueueLinkedList<K> queue = new QueueLinkedList<K>();
 	Scanner S = new Scanner(System.in);
 	int counter = 1;
 	
